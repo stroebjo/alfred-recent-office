@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>de.jonathanstroebele.alfred-recent-office</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>44731001-177C-46CE-BA93-5134E9F43269</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C196AC20-32B0-4AEA-AED3-294138B72644</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Copy file path to clipboard</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>0D45FA1C-90F7-4842-B079-57A6738514D1</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string>Reveal file in finder</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>D304C3CB-78DB-4243-9B73-8475B328F365</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>78368648-9689-4DE4-98FF-69AB571F54B3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0D45FA1C-90F7-4842-B079-57A6738514D1</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string>Reveal file in finder</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>C196AC20-32B0-4AEA-AED3-294138B72644</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Copy file path to clipboard</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>D304C3CB-78DB-4243-9B73-8475B328F365</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>93373512-26BE-4FAD-ACBC-3A760619E847</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0D45FA1C-90F7-4842-B079-57A6738514D1</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string>Reveal file in finder</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>C196AC20-32B0-4AEA-AED3-294138B72644</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Copy file path to clipboard</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>D304C3CB-78DB-4243-9B73-8475B328F365</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Jonathan Ströbele</string>
+	<key>description</key>
+	<string>Directly open recently used Files from Office 365</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Recent Office Files</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.action.revealfile</string>
+			<key>uid</key>
+			<string>0D45FA1C-90F7-4842-B079-57A6738514D1</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>C196AC20-32B0-4AEA-AED3-294138B72644</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>excel</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Searching for recent files…</string>
+				<key>script</key>
+				<string>query="{query}"
+
+python ./alfred-recent-office.py "excel" "{query}"</string>
+				<key>subtext</key>
+				<string>Recently used files by Microsoft Excel</string>
+				<key>title</key>
+				<string>Recently used files</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>44731001-177C-46CE-BA93-5134E9F43269</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>open "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.script</string>
+			<key>uid</key>
+			<string>D304C3CB-78DB-4243-9B73-8475B328F365</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>word</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Searching for recent files…</string>
+				<key>script</key>
+				<string>query="{query}"
+
+python ./alfred-recent-office.py "word" "{query}"</string>
+				<key>subtext</key>
+				<string>Recently used files by Microsoft Word</string>
+				<key>title</key>
+				<string>Recently used files</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>93373512-26BE-4FAD-ACBC-3A760619E847</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>powerpoint</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Searching for recent files…</string>
+				<key>script</key>
+				<string>query="{query}"
+
+python ./alfred-recent-office.py "powerpoint" "{query}"</string>
+				<key>subtext</key>
+				<string>Recently used files by Microsoft PowerPoint</string>
+				<key>title</key>
+				<string>Recently used files</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>78368648-9689-4DE4-98FF-69AB571F54B3</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>0D45FA1C-90F7-4842-B079-57A6738514D1</key>
+		<dict>
+			<key>ypos</key>
+			<real>120</real>
+		</dict>
+		<key>44731001-177C-46CE-BA93-5134E9F43269</key>
+		<dict>
+			<key>ypos</key>
+			<real>190</real>
+		</dict>
+		<key>78368648-9689-4DE4-98FF-69AB571F54B3</key>
+		<dict>
+			<key>ypos</key>
+			<real>410</real>
+		</dict>
+		<key>93373512-26BE-4FAD-ACBC-3A760619E847</key>
+		<dict>
+			<key>ypos</key>
+			<real>300</real>
+		</dict>
+		<key>C196AC20-32B0-4AEA-AED3-294138B72644</key>
+		<dict>
+			<key>ypos</key>
+			<real>120</real>
+		</dict>
+		<key>D304C3CB-78DB-4243-9B73-8475B328F365</key>
+		<dict>
+			<key>ypos</key>
+			<real>300</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://jonathanstroebele.de</string>
+</dict>
+</plist>
