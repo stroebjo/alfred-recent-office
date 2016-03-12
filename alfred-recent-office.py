@@ -54,16 +54,6 @@ for key,value in plist.iteritems():
     clean_path = dirname(file_path).replace(expanduser("~"), "~")
     extension  = splitext(file_path)[1][1:]
 
-    # Office stores filetype icons in their App resources
-    # in the format "<EXTENSION>.icns".
-    icon_path  = office[app]['resources'] +  extension.upper() + ".icns"
-
-    # Word hover doesn't save them in the name of the extion of the file.
-    # So we allways use the same icon.
-    if "word" == app:
-        icon_path = '/Applications/Microsoft Word.app/Contents/Resources/WXBN.icns'
-
-
     # check if file exists
     if not isfile(file_path):
         continue
@@ -72,10 +62,6 @@ for key,value in plist.iteritems():
     if arg and not re.search(arg, file_path, re.IGNORECASE):
         continue
 
-    # check if icns for filetype icon is present in default MS Office location
-    if not isfile(icon_path):
-        icon_path = "icon/unkown.png"
-
 
     item  = SubElement(root, 'item', { 'arg': file_path });
     
@@ -83,7 +69,7 @@ for key,value in plist.iteritems():
     title.text    = file_name
     subtitle      = SubElement(item, 'subtitle')
     subtitle.text = clean_path
-    icon          = SubElement(item, 'icon')
-    icon.text     = icon_path
+    icon          = SubElement(item, 'icon', {'type': 'fileicon'})
+    icon.text     = file_path
 
 print tostring(root)
