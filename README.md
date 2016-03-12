@@ -2,7 +2,7 @@ Recently used Files form Microsoft Office
 =========================================
 
 
-This workflow for [Alfred](http://www.alfredapp.com/) allows you to search through the recently used files by Word, Excel and PowerPoint on your computer.
+This workflow for [Alfred](https://www.alfredapp.com/) allows you to search through the recently used files by Word, Excel and PowerPoint on your computer.
 
 It only works with the latest Office 365 Apps and *not* with Office 2011.
 
