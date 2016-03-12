@@ -1,8 +1,13 @@
+# encoding=utf8
 import plistlib
 from os.path import expanduser, dirname, basename, isfile, splitext
 import urllib
 import sys
 import re
+from xml.etree.ElementTree import Element, SubElement, Comment, tostring
+
+reload(sys)  
+sys.setdefaultencoding('utf8')
 
 office = {
     'excel': {
@@ -29,15 +34,18 @@ arg = sys.argv[2]
 try:
     plist = plistlib.readPlist(expanduser("~") + office[app]['bookmarks'] )
 except Exception, e:
-    print "<?xml version=\"1.0\"?>\n<items>\n"
-    print '<item>'
-    print "\t<title>" + "Uups! Coudn't fetch recent files." + "</title>"
-    print "\t<subtitle>" + str(e) + "</subtitle>"
-    print"</item>\n"
-    print "</items>"
+    root = Element('items')
+    
+    item  = SubElement(root, 'item');
+    
+    title         = SubElement(item, 'title')
+    title.text    = "Uups! Coudn't fetch recent files."
+    subtitle      = SubElement(item, 'subtitle')
+    subtitle.text =  str(e) 
+    print tostring(root)
     exit(0)
 
-print "<?xml version=\"1.0\"?>\n<items>\n"
+root = Element('items')
 
 for key,value in plist.iteritems():
 
@@ -69,12 +77,13 @@ for key,value in plist.iteritems():
         icon_path = "icon/unkown.png"
 
 
-    print '<item arg="' + file_path + '">'
-    print "\t<title>" + file_name + "</title>"
-    print "\t<subtitle>" + clean_path +  "</subtitle>"
-    print "\t<icon>" + icon_path + "</icon>";
-    print"</item>\n"
+    item  = SubElement(root, 'item', { 'arg': file_path });
+    
+    title         = SubElement(item, 'title')
+    title.text    = file_name
+    subtitle      = SubElement(item, 'subtitle')
+    subtitle.text = clean_path
+    icon          = SubElement(item, 'icon')
+    icon.text     = icon_path
 
-print "</items>"
-
-
+print tostring(root)
