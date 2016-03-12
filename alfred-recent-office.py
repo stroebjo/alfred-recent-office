@@ -62,8 +62,10 @@ for key,value in plist.iteritems():
     if arg and not re.search(arg, file_path, re.IGNORECASE):
         continue
 
-
-    item  = SubElement(root, 'item', { 'arg': file_path });
+    item  = SubElement(root, 'item', {
+        'arg': file_path,
+        'type': 'file'
+    });
     
     title         = SubElement(item, 'title')
     title.text    = file_name

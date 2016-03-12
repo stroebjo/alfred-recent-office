@@ -12,22 +12,6 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>C196AC20-32B0-4AEA-AED3-294138B72644</string>
-				<key>modifiers</key>
-				<integer>1048576</integer>
-				<key>modifiersubtext</key>
-				<string>Copy file path to clipboard</string>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>0D45FA1C-90F7-4842-B079-57A6738514D1</string>
-				<key>modifiers</key>
-				<integer>131072</integer>
-				<key>modifiersubtext</key>
-				<string>Reveal file in finder</string>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>D304C3CB-78DB-4243-9B73-8475B328F365</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -39,22 +23,6 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>0D45FA1C-90F7-4842-B079-57A6738514D1</string>
-				<key>modifiers</key>
-				<integer>131072</integer>
-				<key>modifiersubtext</key>
-				<string>Reveal file in finder</string>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>C196AC20-32B0-4AEA-AED3-294138B72644</string>
-				<key>modifiers</key>
-				<integer>1048576</integer>
-				<key>modifiersubtext</key>
-				<string>Copy file path to clipboard</string>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>D304C3CB-78DB-4243-9B73-8475B328F365</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -64,22 +32,6 @@
 		</array>
 		<key>93373512-26BE-4FAD-ACBC-3A760619E847</key>
 		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>0D45FA1C-90F7-4842-B079-57A6738514D1</string>
-				<key>modifiers</key>
-				<integer>131072</integer>
-				<key>modifiersubtext</key>
-				<string>Reveal file in finder</string>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>C196AC20-32B0-4AEA-AED3-294138B72644</string>
-				<key>modifiers</key>
-				<integer>1048576</integer>
-				<key>modifiersubtext</key>
-				<string>Copy file path to clipboard</string>
-			</dict>
 			<dict>
 				<key>destinationuid</key>
 				<string>D304C3CB-78DB-4243-9B73-8475B328F365</string>
@@ -100,29 +52,6 @@
 	<string>Recent Office Files</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>type</key>
-			<string>alfred.workflow.action.revealfile</string>
-			<key>uid</key>
-			<string>0D45FA1C-90F7-4842-B079-57A6738514D1</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>C196AC20-32B0-4AEA-AED3-294138B72644</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -264,11 +193,6 @@ python ./alfred-recent-office.py "powerpoint" "{query}"</string>
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>0D45FA1C-90F7-4842-B079-57A6738514D1</key>
-		<dict>
-			<key>ypos</key>
-			<real>120</real>
-		</dict>
 		<key>44731001-177C-46CE-BA93-5134E9F43269</key>
 		<dict>
 			<key>ypos</key>
@@ -283,11 +207,6 @@ python ./alfred-recent-office.py "powerpoint" "{query}"</string>
 		<dict>
 			<key>ypos</key>
 			<real>300</real>
-		</dict>
-		<key>C196AC20-32B0-4AEA-AED3-294138B72644</key>
-		<dict>
-			<key>ypos</key>
-			<real>120</real>
 		</dict>
 		<key>D304C3CB-78DB-4243-9B73-8475B328F365</key>
 		<dict>
