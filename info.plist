@@ -17,6 +17,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>78368648-9689-4DE4-98FF-69AB571F54B3</key>
@@ -28,6 +30,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>93373512-26BE-4FAD-ACBC-3A760619E847</key>
@@ -39,6 +43,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -55,6 +61,14 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -74,7 +88,11 @@
 				<key>script</key>
 				<string>query="{query}"
 
-python ./alfred-recent-office.py "excel" "{query}"</string>
+/usr/local/bin/python3 ./alfred-recent-office.py "excel" "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>subtext</key>
 				<string>Recently used files by Microsoft Excel</string>
 				<key>title</key>
@@ -89,7 +107,7 @@ python ./alfred-recent-office.py "excel" "{query}"</string>
 			<key>uid</key>
 			<string>44731001-177C-46CE-BA93-5134E9F43269</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -100,19 +118,31 @@ python ./alfred-recent-office.py "excel" "{query}"</string>
 				<integer>102</integer>
 				<key>script</key>
 				<string>open "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.script</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>D304C3CB-78DB-4243-9B73-8475B328F365</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -132,7 +162,11 @@ python ./alfred-recent-office.py "excel" "{query}"</string>
 				<key>script</key>
 				<string>query="{query}"
 
-python ./alfred-recent-office.py "word" "{query}"</string>
+/usr/local/bin/python3 ./alfred-recent-office.py "word" "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>subtext</key>
 				<string>Recently used files by Microsoft Word</string>
 				<key>title</key>
@@ -147,11 +181,19 @@ python ./alfred-recent-office.py "word" "{query}"</string>
 			<key>uid</key>
 			<string>93373512-26BE-4FAD-ACBC-3A760619E847</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -171,7 +213,11 @@ python ./alfred-recent-office.py "word" "{query}"</string>
 				<key>script</key>
 				<string>query="{query}"
 
-python ./alfred-recent-office.py "powerpoint" "{query}"</string>
+/usr/local/bin/python3 ./alfred-recent-office.py "powerpoint" "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>subtext</key>
 				<string>Recently used files by Microsoft PowerPoint</string>
 				<key>title</key>
@@ -186,34 +232,44 @@ python ./alfred-recent-office.py "powerpoint" "{query}"</string>
 			<key>uid</key>
 			<string>78368648-9689-4DE4-98FF-69AB571F54B3</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>This workflow depends on Python 3. Since macOS 10.14 doesn't have Python 3 installed natively, you have to insall it youself. You might have to change the path to the Python 3 execeutable in the 3 Script Filters.</string>
 	<key>uidata</key>
 	<dict>
 		<key>44731001-177C-46CE-BA93-5134E9F43269</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>190</real>
 		</dict>
 		<key>78368648-9689-4DE4-98FF-69AB571F54B3</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>410</real>
 		</dict>
 		<key>93373512-26BE-4FAD-ACBC-3A760619E847</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>300</real>
 		</dict>
 		<key>D304C3CB-78DB-4243-9B73-8475B328F365</key>
 		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
 			<key>ypos</key>
 			<real>300</real>
 		</dict>
 	</dict>
+	<key>version</key>
+	<string>1.2</string>
 	<key>webaddress</key>
 	<string>http://jonathanstroebele.de</string>
 </dict>
